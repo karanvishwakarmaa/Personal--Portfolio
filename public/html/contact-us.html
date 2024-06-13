@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <!-- <link rel="stylesheet" href="contact-us.html"> -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --bg-color:  #080808;
+  --second-bg-color: #131313;
+  --text-color:white;
+  --main-color: #00ffee;
+}
+.contact
+{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--bg-color);
+  background-size: cover;
+}
+.contact .content 
+{
+  max-width: 800px;
+  text-align: center;
+}
+.contact .content h2
+{
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+.span {
+  color: var(--main-color);
+}
+.contact .content p
+{
+  font-weight: 300;
+  color: #fff;
+}
+.container
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.container .contactInfo
+{
+  width: 50%;
+  display: flex;
+flex-direction: column;
+}
+.container .contactInfo .box
+{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container .contactInfo .box .icon
+{
+  /* min-width: 60px;
+  height: 60px;
+  /* background: #fff; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px; */ 
+  min-width: 60px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+background: transparent;
+border: 2px solid var(--main-color);
+font-size: 22px;
+border-radius: 50%;
+color: var(--main-color);
+margin: 3rem 1.5rem 3rem 0;
+transition: 0.3s ease-in-out;
+}
+.container .contactInfo .box .icon:hover{
+  color: var(--text-color);
+  transform: scale(1.3)translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+}
+.container .contactInfo .box .text
+{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+/* .container .contactInfo .box .icon i{
+  background: transparent;
+border: 2px solid var(--main-color);
+transition: 0.3s ease-in-out;
+} */
+/* .container .contactInfo .box .icon i:hover{
+  color: var(--text-color);
+  transform: scale(1.3)translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+} */
+.container .contactInfo .box .text h3 
+{
+  font-weight: 500;
+  color: #00bcd4;
+}
+.contactForm
+{
+  width: 40%;
+  padding: 40px;
+  background: transparent;
+}
+.contactForm h2
+{
+  font-size: 30px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.contactForm .inputBox
+{
+  position: relative;
+  width: 100%;
+  margin-top: ;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span
+{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+  /* width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px; */
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: black;
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.contactForm .inputBox input[type="submit"]:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 50px var(--main-color);
+}
+@media (max-width: 991px)
+{
+.contact
+{
+  padding: 50px;
+}
+.container
+{
+  flex-direction: column;
+}
+.container .contactInfo
+{
+  margin-bottom: 40px;
+}
+.container .contactInfo .contactForm
+{
+  width: 100%;
+}
+}
+  </style>
+</head>
+<body>
+  <section class="contact">
+    <div class="content" >
+<h2>Contact <span class="span">Us</span></h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quidem molestias neque similique optio dolorem sapiente amet quia quis quibusdam expedita aspernatur eaque reiciendis cupiditate doloribus sit, alias, ad </p>
+    </div>
+    <div class="container">
+      <div class="contactInfo">
+       <div class="box">
+        <div class="icon"> <i class='bx bx-map'></i></div>
+          <div class="text">
+            <h3>Address</h3>
+            <p>4671 Sugar Camp Road, <br>Owatonna,Minnesota,<br>55060</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon"><i class='bx bx-phone' ></i></div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>507-475-6094</p>
+            </div>
+          </div>
+       <div class="box">
+        <div class="icon"> <i class='bx bx-envelope' ></i></div>
+          <div class="text">
+            <h3>Email</h3>
+            <p>karanvishwakarma634@gmail.com</p>
+          </div>
+     </div>
+      </div>
+    
+    <div class="contactForm">
+<form action="">
+  <h2>Send <span class="span">Message</span></h2>
+  <div class="inputBox">
+    <input type="text" name="" required="required">
+    <span>Full Name</span>
+  </div>
+  <div class="inputBox">
+    <input type="text" name="" required="required">
+    <span>Email</span>
+  </div>
+  <div class="inputBox">
+    <textarea name="" id="" required="required"></textarea>
+    <span>Type Your Message....</span>
+  </div>
+  <div class="inputBox">
+    <input type="submit" name="" value="Send">
+  </div>
+</form>
+    </div>
+  </div>
+  </section>
+
+
+</body>
+</html>
