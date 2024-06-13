@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+       *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+:root{
+  --bg-color:  #080808;
+  --second-bg-color: #131313;
+  --text-color:white;
+  --main-color: #00ffee;
+}
+
+html{
+  font-size: 80%;
+  overflow-x: hidden;
+}
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #1e1e1e;
+            color: var(--main-color);
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header nav ul {
+            padding: 0;
+            list-style: none;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+        .showcase {
+            background: black no-repeat center center/cover;
+            min-height: 400px;
+            color: var(--main-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .showcase h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .showcase p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #fff;
+        }
+        .showcase span{
+          color: var(--main-color);
+        }
+        .content {
+            padding: 40px 20px;
+            background: black;
+            margin: 20px 0;
+            color: var(--main-color);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .content p {
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #fff;
+        }
+        .feature-box {
+            margin: 20px 0;
+        }
+        .feature-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        footer {
+            background: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        #contact a{
+color: var(--main-color);
+
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .showcase h1 {
+                font-size: 2.5rem;
+            }
+            .showcase p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .showcase h1 {
+                font-size: 2rem;
+            }
+            .showcase p {
+                font-size: 0.9rem;
+            }
+            .content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Online Banking System</h1>
+            <nav>
+                <ul>
+                    <li><a href="/public/index.html">Overview</a></li>
+                    <li><a href="mailto:karanvishwakarma634@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="showcase">
+        <div class="container">
+            <h1>Your Co-operative Bank, Online</h1>
+            <p>Secure, reliable, and user-friendly <span>online banking system</span> for co-operative banks.</p>
+        </div>
+    </section>
+    <section id="overview" class="content">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p>BANKONEER is a comprehensive software solution for co-operative banks, facilitating daily banking operations, online banking, and financial management through a user-friendly interface and sophisticated algorithms.</p>
+        </div>
+    </section>
+    <section id="features" class="content">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature-box">
+                <h3>User Authentication</h3>
+                <p>Secure login and registration for both bank staff and customers.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Account Management</h3>
+                <p>Create, view, deposit, withdraw, and manage accounts with ease.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Loan Management</h3>
+                <p>Detailed view and management of ongoing and completed loans.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Transactions</h3>
+                <p>Handle all types of transactions including third-party transfers.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Online Banking</h3>
+                <p>Access to banking services through a web portal anytime, anywhere.</p>
+            </div>
+            <div class="feature-box">
+                <h3>B-Payment Portal</h3>
+                <p>Integrated online payment system for seamless third-party transfers.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Administrative Control</h3>
+                <p>Full control over the system for adding, removing, and managing transactions and financials.</p>
+            </div>
+        </div>
+    </section>
+    <section id="technologies" class="content">
+        <div class="container">
+            <h2>Technologies Used</h2>
+            <p>- **Java**: For desktop workstation software used in administrative and banking operations.</p>
+            <p>- **PHP, HTML, CSS, JavaScript**: For developing the online banking platform.</p>
+            <p>- **MS-SQL with ODBC Connector Driver**: For database management.</p>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="container">
+          <p>Contact:    <a href="mailto:karanvishwakarma634@gmail.com">Karan Vishwakarma</a></p>
+        </div>
+    </footer>
+</body>
+</html>

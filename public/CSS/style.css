@@ -592,6 +592,10 @@ margin: auto;
   color: white;
 }
 
+.copyright span a {
+  color: var(--main-color);
+  font-size: 15px;
+}
 @media(max-width:1285px){
   html{
     font-size: 55%;

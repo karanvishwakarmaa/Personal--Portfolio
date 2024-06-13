@@ -1,277 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Train Ticket Reservation System</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <style>
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-}
-:root{
-  --bg-color:  #080808;
-  --second-bg-color: #131313;
-  --text-color:white;
-  --main-color: #00ffee;
-}
-
-html{
-  font-size: 60%;
-  overflow-x: hidden;
-}
-body{
-  background: var(--bg-color);
-  color: var(--text-color);
-}
-.header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 4rem 12% 4rem;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 5;
-}
-
-.logo{
-  font-size: 3rem;
-  color: var(--text-color);
-  font-weight: 800;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.logo:hover{
-  transform: scale(1.1);
-}
-.logo span{
-  text-shadow: 0 0 25px var(--main-color);
-}
-.navbar a{
-  font-size: 1.8rem;
-  color: var(--text-color);
-  margin-left: 4rem;
-  font-weight: 500;
-  transition: 0.3s ease;
-  border-bottom: 3px solid transparent;
-}
-.navbar a:hover,
-.navbar a.active{
-  color: var(--main-color);
-  border-bottom: 3px solid var(--main-color);
-}
-#menu-icon{
-  font-size: 3.6rem;
-  color: var(--main-color);
-  display: none;
-}
-
-
-
-@media(max-width:1285px){
-  html{
-    font-size: 55%;
-  }
-  .services-container{
-    padding-bottom: 7rem;
-    grid-template-columns: repeat(2,1fr);
-    margin: 0 5rem;
-  }
-}
-@media(max-width:991px){
-  header{
-    padding: 2rem 3%;
-  }
-  section{
-    padding: 10rem 3% 2rem;
-  }
-  .timeline-items::before{
-    left: 7px;
-  }
-  .timeline-item:nth-child(odd){
-    padding-right: 0;
-    text-align: left;
-  }
-  .timeline-item:nth-child(odd),
-  .timeline-item:nth-child(even){
-    padding-left: 37px;
-  }
-  .timeline-dot{
-    left: 0;
-  }
-  .services{
-    padding-bottom: 7rem;
-  }
-  .blogging .wrapper{
-    grid-template-columns: repeat(1,1fr);
-  }
-  .contact form{
-    flex-direction: column;
-  }
-  .footer{
-    padding: 2rem 3%;
-  }
-}
-@media(max-width:895px){
-  #menu-icon{
-    display: block;
-  }
-  .navbar{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 50%;
-    padding: 1rem 3%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(20px);
-    border-bottom-left-radius: 2rem;
-    border-left: 2px solid var(--main-color);
-    border-bottom: 2px solid var(--main-color);
-    display: none;
-  }
-  .navbar .active{
-    display: block;
-  }
-  .navbar a{
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-    color: white;
-  }
-  .home{
-    flex-direction: column-reverse;
-    margin: 5rem 4rem;
-  }
-  .home-content h3{
-    font-size: 2.6rem;
-  }
-  .home-content h1{
-    font-size: 8rem;
-    margin-top: 3rem;
-  }
-  .home-content p{
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .home-img img{
-    width: 56vw;
-  }
-  .services h2{
-    margin-bottom: 3rem;
-  }
-  .services-container{
-    grid-template-columns: repeat(1,1fr);
-  }
-}
-
-.blogging{
-  background: var(--second-bg-color);
-}
-.blogging-box{
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.blogging .heading{
-  margin-bottom: 5rem;
-}
-.blogging-box img{
-  width: 15rem;
-  border-radius: 50%;
-  border: 3px solid var(--main-color);
-  box-shadow: 0 0 25px var(--main-color);
-}
-.wrapper{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 3rem;
-}
-.blogging-item{
-  min-height: 550px;
-  max-width: 450px;
-  background: rgba(0, 0, 0, 0.7);
-  border: 3px solid rgba(238, 238, 238, 0.2);
-  border-radius: 2rem;
-  margin: 0 2rem;
-  padding: 30px 60px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1.5rem;
-  color: white;
-  transition: 0.4s ease-in-out;
-}
-.blogging-item:hover{
-  border: 3px solid var(--main-color);
-  transform: translateY(-10px)scale(1.03);
-  box-shadow: 0 0 50px var(--main-color);
-}
-.blogging-item h2{
-  font-size: 2.8rem;
-}
-.blogging-item p{
-  font-size: 1.3rem;
-}
-#star{
-  color: gold;
-  font-size: 2rem;
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Reservation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #ddd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            background-color: #1f1f1f;
+            text-align: left;
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1, h2, h3 {
+            color: #03a9f4;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: justify;
+        }
+        .tech-used {
+            margin-bottom: 20px;
+        }
+        .tech-used ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .tech-used ul li {
+            margin-bottom: 10px;
+        }
+        .key-features {
+            margin-bottom: 20px;
+        }
+        .key-features ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+        .future-enhancements {
+            margin-bottom: 20px;
+        }
+        .future-enhancements ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+        .conclusion {
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            color: #aaa;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+        }
+        .footer p {
+            margin: 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1, h2, h3 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-   
-  <header class="header">
-    <a href="#home" class="logo">Karann <span>Vishwakarma</span> </a>
-
-
-  <i class='bx bx-menu' id="menu-icon"></i>
-   
-
-
-<nav class="navbar">
-  <a href="#home" class="active">Home</a>
-  <a href="#education">Education</a>
-  <a href="#services">Services</a>
-  <a href="#blogging">Blogging</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-  </header>
-  <section class="ttrs" id="ttrs">
-    <div class="ttrs-box">
-      <h2 class="heading">Train Ticket Reservation System</h2>
-
-      <div class="wrapper">
-        <div class="blogging-item">
-          <img src="image.jpg" alt="">
-          <h2>Vishwakarma</h2>
-          <div class="rating">
-            <i class='bx bxs-star' id="star"></i>
-            <i class='bx bxs-star' id="star"></i>
-            <i class='bx bxs-star' id="star"></i>
-            <i class='bx bxs-star' id="star"></i>
-            <i class='bx bxs-star' id="star"></i>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit natus dolore soluta harum unde aut quaerat culpa, voluptatum autem nostrum ut beatae repellat quis ullam? Ullam incidunt consectetur neque ex.</p>
+    <div class="container">
+        <h1>Train Ticket Reservation System</h1>
+        <!-- <div class="image-wrapper">
+          <img src="/public/Image/s1.png" alt="Train Ticket Reservation System">
+      </div> -->
+        <p class="tech-used"><strong>Technologies Used:</strong></p>
+        <ul1>
+          
+          <strong>1. Front-End Development:
+          </strong>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>          
+           
+              <br>
+                <strong>2. Back-End Development
+                </strong>
+                  <li>Java</li>
+                  <li>JDBC</li>
+                  <li>MySQL</li>          
+            </ul>
+        </ul1>
+        <div class="project-description">
+            <h2>Project Description:</h2>
+            <p>This project is about the Train-Ticket-Reservation-System which is used to view Train Schedule, search trains, Seat availability, Train timings. We can also enquire about fare of different trains. We can get information about train between two stations. We can book seats online. This provides a safe and secure seat reservation system.</p>
         </div>
-
-
+        <div class="key-features">
+            <h3>Key Features:</h3>
+            <ul>
+                <ul>1.
+                  Admin have the following access to this website: <br> <br>
+                  <li>Login</li>
+                  <li>Add Train</li>
+                  <li>Update Trains</li>
+                  <li>Remove or Cancel Trains</li>
+                  <li>View Trains</li>
+                  <li>Profile Edit</li>
+                  <li>Logout</li>
+                </ul>
+                <br>
+                <ul>2.  Users have the following Access: <br><br>
+                <li>Register</li>
+                <li>Login</li>
+                <li>View Trains</li>
+                <li>Check Seat Availability</li>
+                <li>Search Trains</li>
+                <li>Train Avaiablity and Fare Between Stations</li>
+                <li>Books Tickets</li>
+                <li>View Booking History</li>
+                <li>View Profile</li>
+                <li>Update Profile</li>
+                <li>Change Password</li>
+                <li>Logout</li>
+                </ul>
+                <br>
+            </ul>
+        </div>
+        <div class="technical-overview">
+            <h3>Technical Overview:</h3>
+            <p>The backend of the Train Ticket Reservation System is powered by Java, utilizing Hibernate for seamless database interaction with MySQL. This ensures that data operations are efficient and maintainable. On the frontend, HTML is used for structuring web pages, CSS for styling, and JavaScript for client-side interactivity such as form validation and dynamic content updates.</p>
+        </div>
+        <div class="future-enhancements">
+            <h3>Future Enhancements:</h3>
+            <ul>
+                <li>Seat Selection Diagrams</li>
+                <li>Integration with Payment Gateways</li>
+                <li>Real-time Train Status Updates</li>
+            </ul>
+        </div>
+        <div class="conclusion">
+            <h3>Conclusion:</h3>
+            <p>The Train Ticket Reservation System showcases my proficiency in Java development, Hibernate ORM, MySQL database management, and frontend web technologies (HTML/CSS/JavaScript). It exemplifies my ability to design and implement a scalable and user-friendly web application for managing train reservations.</p>
+            <p>This project not only demonstrates technical skills but also highlights my capability to deliver practical solutions that meet real-world requirements in the domain of transportation and booking systems. <br></p>
+        </div> <br>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Karan Vishwakarma. All rights reserved.</p>
+    </div>
 </body>
 </html>

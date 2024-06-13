@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud-Based Hotel Management System</title>
+    <title>Karan Vishwakarma - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-      *{
+        /* body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        } */
+        *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,13 +38,6 @@ body{
   background: var(--bg-color);
   color: var(--text-color);
 }
-        /* body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        } */
         .container {
             width: 80%;
             margin: auto;
@@ -45,33 +45,19 @@ body{
             padding: 20px;
         }
         header {
-          font-size: 20px;
             background: var(--bg-color);
-            /* color: var(--main-color); */
-            padding-top: 30px;
-            padding-bottom: 10px;
+            color: #fff;
+            padding: 20px 0;
+            font-size: 20px;
             border-bottom: #77aaff 3px solid;
+            text-align: center;
         }
         header h1 {
             margin: 0;
-            text-align: center;
+            /* font-size: 2.5em; */
             color: var(--main-color);
         }
-        header nav ul {
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
-        header nav ul li {
-            display: inline;
-            padding: 0 10px;
-        }
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 1em;
-        }
+        
         .showcase {
             background: var(--bg-color) no-repeat center center/cover;
             min-height: 200px;
@@ -82,6 +68,8 @@ body{
         .showcase h1 {
             font-size: 3em;
             margin: 0;
+            color: var(--main-color);
+
         }
         .showcase p {
             font-size: 1.5em;
@@ -99,15 +87,24 @@ body{
             line-height: 1.6;
             font-size: 1.1em;
         }
+        .project {
+            margin-bottom: 20px;
+        }
+        .project h3 {
+            font-size: 1.5em;
+        }
+        .container h2{
+          color: var(--main-color);
+        }
         footer {
             background: var(--bg-color);
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            font-size: 19px;
             margin-top: 20px;
-            font-size: 15px;
         }
-        footer a {
+        footer a{
           text-decoration: none;
           color: var(--main-color);
         }
@@ -117,7 +114,7 @@ body{
                 padding: 10px;
             }
             header h1 {
-                font-size: 1.5em;
+                font-size: 2em;
             }
             header nav ul li {
                 display: block;
@@ -125,14 +122,12 @@ body{
             }
             .showcase h1 {
                 font-size: 2em;
-                color: var(--main-color);
             }
             .showcase p {
                 font-size: 1.2em;
             }
             .content h2 {
                 font-size: 1.5em;
-                color: var(--main-color);
             }
             .content p {
                 font-size: 1em;
@@ -163,44 +158,45 @@ body{
 <body>
     <header>
         <div class="container">
-            <h1>Cloud-Based Hotel Management System</h1>
+            <h1>Karan Vishwakarma</h1>
           
         </div>
     </header>
     <section class="showcase">
         <div class="container">
-            <h1>Efficient Hotel Management</h1> <br><br>
-            <p>Automate your hotel operations with our cloud-based system.</p>
+            <h1>Welcome to My Portfolio</h1> <br> <br>
+            <p>Showcasing my work and skills in software development.</p>
         </div>
     </section>
-    <section id="overview" class="content">
+    <section id="about" class="content">
         <div class="container">
-            <h2>Project Overview</h2> <br><br>
-            <p>The Cloud-Based Hotel Management System is implemented using the Swing GUI widget toolkit and MySQL database. This system automates the hotel management process, making it more efficient and reducing the time spent on manual updates.</p>
+            <h2>About Me</h2> <br>
+            <p>
+                I am Karan Vishwakarma, a passionate software developer with a focus on creating dynamic and responsive web applications. With expertise in Java, Swing, AWT, JDBC, and MySQL, I strive to build efficient and scalable solutions. My portfolio highlights some of the projects I've worked on, demonstrating my skills and experience.
+            </p>
         </div>
     </section>
-    <section id="features" class="content">
+    <section id="projects" class="content">
         <div class="container">
-            <h2>Key Features</h2> <br><br>
-            <p>- Add Room Details: Easily add, update, delete, and view room records.</p>
-            <p>- Customer Check-In: Insert all records, including room details, for new customers.</p>
-            <p>- Customer Check-Out: Calculate bill automatically and store bill details.</p>
-            <p>- Auto-Generate Bill: Automatically generate bills when customers check out.</p>
-            <p>- Store Bill Details: Save bills for future reference and printing.</p>
-            <p>- Scalable Service: Pay-as-you-go model with easy upgrades and quick installation.</p>
-        </div>
-    </section>
-    <section id="technologies" class="content">
-        <div class="container">
-            <h2>Technologies Used</h2> <br><br>
-            <p>- Java: Backend logic and core functionality.</p>
-            <p>- AWT & Swing: GUI components for creating the user interface.</p>
-            <p>- JDBC: Database connectivity.</p>
-            <p>- MySQL: Database for storing transaction history.</p>
+            <h2>Projects</h2> <br> <br>
+            <div class="project">
+                <h3>Cloud-Based Hotel Management System</h3><br>
+                <p>
+                    Implemented using Java, Swing, and MySQL, this system automates hotel management processes, reducing manual updates and ensuring efficient operations. Key features include adding and updating room details, customer check-ins and check-outs, automatic bill generation, and more.
+                </p>
+            </div> <br><br><br><br>
+            <div class="project">
+                <h3>Online Banking System</h3> <br>
+                <p>
+                    A secure and user-friendly online banking application developed with Java, Hibernate, and MySQL. It offers features such as user authentication, account management, funds transfer, bill payments, and an admin panel for managing users and transactions.
+                </p>
+            </div>
         </div>
     </section>
     <footer id="contact">
-      <p>Contact:    <a href="mailto:karanvishwakarma634@gmail.com">Karan Vishwakarma</a></p>
+        <div class="container">
+            <p>Contact: <a href="mailto:karan@example.com">Karan Vishwakarma</a></p>
+        </div>
     </footer>
 </body>
 </html>

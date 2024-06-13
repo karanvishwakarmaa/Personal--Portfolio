@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* General Styles */
+        /* body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        } */ 
+
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+:root{
+  --bg-color:  #080808;
+  --second-bg-color: #131313;
+  --text-color:white;
+  --main-color: #00ffee;
+}
+
+body{
+  line-height: 1.6;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: var(--bg-color);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: var(--main-color);
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        .main-content {
+            grid-column: span 2;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .sidebar {
+          background: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .sidebar h2{
+          color: var(--main-color);
+          text-align: center;
+        }
+        .sidebar ul li a{
+          text-decoration: none;
+          color: #fff;
+        }
+        .post {
+          background: var(--bg-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .post h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            color: var(--main-color);
+        }
+        .post p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Full Stack Developer Blog</h1>
+            <p>Insights and tips for aspiring and experienced full stack developers</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="main-content">
+                <article class="post">
+                    <h2>Introduction to Full Stack Development</h2>
+                    <p>
+                        Full stack development involves working on both the front-end and back-end portions of web applications. It requires proficiency in multiple technologies and frameworks to build scalable and efficient solutions.
+                    </p>
+                    <p>
+                        In this blog post, we'll explore the core concepts of full stack development, discuss essential skills, and provide tips for becoming a successful full stack developer.
+                    </p>
+                </article>
+                <article class="post">
+                    <h2>Front-End Technologies</h2>
+                    <p>
+                        Front-end technologies include HTML, CSS, and JavaScript, which are used to create the user interface and user experience of web applications. Frameworks like React, Angular, and Vue.js are also popular choices among developers.
+                    </p>
+                    <p>
+                        We'll delve into the latest trends in front-end development and explore how these technologies contribute to building responsive and interactive web interfaces.
+                    </p>
+                </article>
+                <article class="post">
+                    <h2>Back-End Technologies</h2>
+                    <p>
+                        Back-end technologies handle the server-side logic and database interactions of web applications. Languages such as Python, Node.js, and Ruby on Rails are commonly used, along with frameworks like Express and Django.
+                    </p>
+                    <p>
+                        We'll discuss the role of back-end development in ensuring the performance, security, and scalability of web applications, as well as best practices for designing robust back-end systems.
+                    </p>
+                </article>
+                <article class="post">
+                    <h2>Full Stack Frameworks and Tools</h2>
+                    <p>
+                        Full stack developers often leverage frameworks and tools that streamline development processes and enhance productivity. Examples include MERN (MongoDB, Express.js, React, Node.js), MEAN (MongoDB, Express.js, Angular, Node.js), and LAMP (Linux, Apache, MySQL, PHP).
+                    </p>
+                    <p>
+                        We'll explore these frameworks in detail and highlight their benefits for building modern web applications efficiently.
+                    </p>
+                </article>
+            </div>
+            <aside class="sidebar">
+                <h2>About the Author</h2>
+                <p>
+                    Karan Vishwakarma is a passionate full stack developer with expertise in creating robust and scalable web applications. With years of experience in front-end and back-end technologies, he shares valuable insights and tips on his journey as a developer.
+                </p>
+                <h2>Recent Posts</h2>
+                <ul>
+                    <li><a href="#">Introduction to Full Stack Development</a></li>
+                    <li><a href="#">Front-End Technologies Explained</a></li>
+                    <li><a href="#">Back-End Technologies Overview</a></li>
+                    <li><a href="#">Choosing the Right Full Stack Framework</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Full Stack Developer Blog | Designed by Karan Vishwakarma</p>
+        </div>
+    </footer>
+</body>
+</html>
