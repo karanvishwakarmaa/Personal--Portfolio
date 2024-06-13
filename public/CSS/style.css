@@ -201,7 +201,7 @@ transition: 0.3s ease-in-out;
   height: 100%;
   border-left: 3px solid var(--bg-color);
   right: -8px;
-  animation: cursor 0.6s infinite, typing 20s steps(14)infinite;
+  animation: cursor 0.6s infinite, typing 10s steps(14)infinite;
 }
 @keyframes cursor{
   to{
@@ -209,13 +209,13 @@ transition: 0.3s ease-in-out;
   }
 }
 @keyframes words{
-  0%,
+  /* 0%,
   20%{
     content: "Java Developer";
   }
   21%,
   40%{
-    content: "Web Designer";
+    content: "Web Developer";
   }
   41%,
   60%{
@@ -229,10 +229,40 @@ transition: 0.3s ease-in-out;
   80%{
     content: "Thumbnail Editor";
   } */
-  81%,
+  /* 81%,
   100%{
     content: "I Build All The Things Your Want!";
-  }
+  }  */
+    0%,10% {
+      content: "Software Developer";
+    }
+    11%,20% {
+      content: "Blogger";
+    }
+    21%, 30%{
+      content: "Youtuber";
+    }
+    31%, 40%{
+      content: "Graphic Designer";
+    }
+    41%,51%{
+      content: "Video Editor";
+    }
+    52%,60%{
+content: "Thumbnail Editor";
+    }
+    61%,70%{
+content: "Web Designer";
+    }
+    71%,80%{
+      content: "Java Developer";
+    }
+    81%,90%{
+      content: "Content Writer";
+    }
+    91%,100%{
+      content: "Freelancer";
+    }
 }
 @keyframes typing{
   10%,

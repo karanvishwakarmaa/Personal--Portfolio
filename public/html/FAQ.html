@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Personal Portfolio</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.faq-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+
+.faq-item label {
+    display: block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item label:hover {
+    background-color: #0056b3;
+}
+
+.faq-item .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 0 10px;
+    border-left: 4px solid #007BFF;
+    border-radius: 0 0 4px 4px;
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-content {
+    max-height: 100px;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq-section">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-item">
+                <input type="checkbox" id="faq1">
+                <label for="faq1">What is your name?</label>
+                <div class="faq-content">
+                    <p>My name is Karan Vishwakarma.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq2">
+                <label for="faq2">What do you do?</label>
+                <div class="faq-content">
+                    <p>I am a web developer and also a Java Developer specializing in front-end and back-end development.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq3">
+                <label for="faq3">What technologies do you use?</label>
+                <div class="faq-content">
+                    <p>I primarily use HTML, CSS, JavaScript, Java, React, and Node.js.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq4">
+                <label for="faq4">How can I contact you?</label>
+                <div class="faq-content">
+                    <p>You can contact me via the contact form on the Contact page or by email at karanvishwakarma634@gmail.com.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Karan Vishwakarma. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
