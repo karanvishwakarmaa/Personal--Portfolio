@@ -209,30 +209,6 @@ transition: 0.3s ease-in-out;
   }
 }
 @keyframes words{
-  /* 0%,
-  20%{
-    content: "Java Developer";
-  }
-  21%,
-  40%{
-    content: "Web Developer";
-  }
-  41%,
-  60%{
-    content: "Video Editor";
-  }
-  61%,
-  80%{
-    content: "Graphic Designer";
-  }
-  /* 71%,
-  80%{
-    content: "Thumbnail Editor";
-  } */
-  /* 81%,
-  100%{
-    content: "I Build All The Things Your Want!";
-  }  */
     0%,10% {
       content: "Software Developer";
     }
